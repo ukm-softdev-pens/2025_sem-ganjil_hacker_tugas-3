@@ -92,9 +92,9 @@ export default function App() {
     e.preventDefault();
     try {
       await updateDoc(doc(db, 'buku', selectedId), {
-        title: formData.title,
-        author: formData.author,
-        year: formData.year,
+        title: formDataEdit.title,
+        author: formDataEdit.author,
+        year: formDataEdit.year,
       });
 
       const querySnapshot = await getDocs(collection(db, "buku"));
@@ -109,6 +109,11 @@ export default function App() {
     } catch (error) {
       console.error('Error updating document:', error);
     }
+  };
+  
+  const handleInputChangeEdit = (e) => {
+    const { name, value } = e.target;
+    setFormDataEdit(prev => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -132,7 +137,7 @@ export default function App() {
         onClose={() => setIsModalEditOpen(false)}
         handleSubmit={handleEditSubmit}
         formData={formDataEdit}
-        handleInputChange={handleInputChange}
+        handleInputChange={handleInputChangeEdit}
       />
     </>
   )
