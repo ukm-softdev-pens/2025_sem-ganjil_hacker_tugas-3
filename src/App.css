@@ -1,0 +1,258 @@
+    /* General Body Styles */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #e2e8f0; /* Warna latar belakang halaman diubah menjadi abu-abu netral */
+      color: #334155;
+      display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Wrapper untuk memusatkan konten */
+    .main-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* App Container */
+    .app-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0;
+      background-color: #ffffff; /* Memberi latar belakang putih pada container utama */
+      padding: 2rem; /* Menambah ruang di dalam container */
+      border-radius: 1rem; /* Memberi sudut membulat */
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Menambah bayangan agar terangkat */
+      box-sizing: border-box;
+    }
+
+    /* Header */
+    .app-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .app-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e293b;
+      margin: 0;
+    }
+
+    .app-header p {
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+
+    /* Card Styles */
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+
+    /* Form Styles */
+    .add-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .add-form input {
+      padding: 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .add-form input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+    }
+
+    .add-form input[type="text"] {
+      flex-grow: 1;
+    }
+
+    .add-form input[type="number"] {
+      width: 150px;
+    }
+
+    .add-form button, .edit-form .edit-actions button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .add-form button {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .add-form button:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Total Savings Display */
+    .total-savings-card {
+      background-color: #22c55e;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    .total-savings-card h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .total-savings-card p {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* Savings List */
+    .savings-list h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .savings-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .saving-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      transition: background-color 0.2s;
+    }
+
+    .saving-item:hover {
+        background-color: #f1f5f9;
+    }
+
+    .saving-item .info .description {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .saving-item .info .amount {
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    .saving-item .actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .saving-item .actions button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: background-color 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+    }
+
+    .saving-item .actions button:hover {
+      color: #2563eb;
+      background-color: #dbeafe;
+    }
+
+    .saving-item .actions button.delete-btn:hover {
+      color: #dc2626;
+      background-color: #fee2e2;
+    }
+
+    /* Edit Form */
+    .edit-form {
+        background-color: #f1f5f9;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .edit-form input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #cbd5e1;
+    }
+    .edit-form .edit-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .edit-form .edit-actions .save-btn {
+        background-color: #22c55e;
+        color: white;
+    }
+    .edit-form .edit-actions .cancel-btn {
+        background-color: #e2e8f0;
+    }
+
+    /* Error Message */
+    .error-message {
+        background-color: #fee2e2;
+        border: 1px solid #f87171;
+        color: #b91c1c;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .add-form {
+        flex-direction: column;
+      }
+      .add-form input[type="number"] {
+        width: 100%;
+      }
+      .main-wrapper {
+        align-items: flex-start; /* Konten mulai dari atas di mobile */
+        padding: 0;
+      }
+      .app-container {
+        padding: 1rem;
+        border-radius: 0;
+      }
+    }
