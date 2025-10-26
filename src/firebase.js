@@ -1,24 +1,24 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
-// Inisialisasi Firestore dan ekspor untuk digunakan di file lain
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// src/firebase.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// ✅ Konfigurasi Firebase Project kamu
 const firebaseConfig = {
-    apiKey: "AIzaSyCqMzoSIrwGgd06mEn4qqqmp5AuXU5Epr4",
-    authDomain: "root-96c13.firebaseapp.com",
-    projectId: "root-96c13",
-    storageBucket: "root-96c13.firebasestorage.app",
-    messagingSenderId: "812631527161",
-    appId: "1:812631527161:web:8dcdea1fda736491f45c28",
-    measurementId: "G-4K9Y9DHSD3"
+  apiKey: "AIzaSyCF3tV_PWCCEknd-h9LItEz5Kj5IbLAMjk",
+  authDomain: "react-d5683.firebaseapp.com",
+  projectId: "react-d5683",
+  storageBucket: "react-d5683.firebasestorage.app",
+  messagingSenderId: "930719114145",
+  appId: "1:930719114145:web:94a3e402d97e48b628a1e0",
+  measurementId: "G-RM5E0V1K32"
 };
 
-// Initialize Firebase
+// ✅ Inisialisasi Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// ✅ Ekspor instance yang bisa dipakai di seluruh aplikasi
+export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+export default app;
